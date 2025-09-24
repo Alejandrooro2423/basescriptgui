@@ -1,0 +1,22 @@
+package Ejercicio2;
+//ALEJANDRO IGNACIO OROZCO AGUILAR
+//a) Se deriva de JuegoAdivinaNumero
+public class JuegoAdivinaImpar extends JuegoAdivinaNumero {
+
+    public JuegoAdivinaImpar(int numeroDeVidas) {
+        super(numeroDeVidas);
+    }
+    //Sobreesbribiendo o Redefiniendo como dice el enunciado
+    @Override
+    public boolean validaNumero(int n) {
+        if (n < 0 || n > 10) {
+            System.out.println("Error: el número debe estar entre 0 y 10.");
+            return false;
+        }
+        if (n % 2 == 0) {
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!Error: solo IMPAREs!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.");
+            return false;
+        }
+        return true;
+    }
+}
